@@ -64,8 +64,6 @@ Across the complete project, I:
 | Deployment replicas | `3` |
 | Kubernetes Service | `NodePort` |
 
-> **Screenshot quality:** The project screenshots were copied from the original files without resizing or recompression. Click any screenshot to open the full-resolution image.
-
 ---
 
 # Part 1 — Launch a Kubernetes Cluster
@@ -373,8 +371,6 @@ Optionally configure the Git identity used on the EC2 instance:
 git config --global user.name "YOUR_NAME"
 git config --global user.email "YOUR_EMAIL"
 ```
-
-> No project screenshot was captured for this installation step.
 
 ---
 
@@ -806,8 +802,6 @@ A successful command updates the cluster context in:
 /home/ec2-user/.kube/config
 ```
 
-> No screenshot was captured for this command.
-
 ---
 
 ## Step 2 — Configure Kubernetes Access for the EC2 Management Role
@@ -1000,14 +994,10 @@ eksctl delete cluster \
   --region us-west-2
 ```
 
-After deletion, verify that the cluster, worker-node EC2 instances, and related `eksctl` CloudFormation stacks have been removed. Stop or terminate the EC2 management instance and delete the ECR repository if they are no longer needed.
+After deletion, verify that the cluster, worker node EC2 instances, and related `eksctl` CloudFormation stacks have been removed. Stop or terminate the EC2 management instance and delete the ECR repository if they are no longer needed.
 
 # References
 
-- [NextWork — Launch a Kubernetes Cluster](https://nextwork.ai/projects/aws-compute-eks1?track=high)
-- [NextWork — Set Up Kubernetes Deployment](https://nextwork.ai/projects/aws-compute-eks2)
-- [NextWork — Create Kubernetes Manifests](https://nextwork.ai/projects/aws-compute-eks3)
-- [NextWork — Deploy Backend with Kubernetes](https://nextwork.ai/projects/aws-compute-eks4)
 - [AWS — Get started with Amazon EKS using eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)
 - [AWS — Install kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 - [Amazon ECR — Pushing a Docker image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)
