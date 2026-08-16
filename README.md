@@ -2,15 +2,9 @@
 
 An end-to-end AWS + Kubernetes project that builds a managed **Amazon EKS** cluster, containerizes a **Python Flask backend** with Docker, stores the image in **Amazon ECR**, creates Kubernetes manifests, and deploys the application to EKS.
 
-> **NextWork project series**
-> - [Part 1 — Launch a Kubernetes Cluster](https://nextwork.ai/projects/aws-compute-eks1?track=high)
-> - [Part 2 — Set Up Kubernetes Deployment](https://nextwork.ai/projects/aws-compute-eks2)
-> - [Part 3 — Create Kubernetes Manifests](https://nextwork.ai/projects/aws-compute-eks3)
-> - [Part 4 — Deploy Backend with Kubernetes](https://nextwork.ai/projects/aws-compute-eks4)
->
 > This README combines my implementation notes, commands, results, and screenshots from all four stages into one end-to-end project.
 
-## Final Architecture
+## Architecture
 
 [![End-to-end Kubernetes deployment architecture](images/00-final-architecture.png)](images/00-final-architecture.png)
 
