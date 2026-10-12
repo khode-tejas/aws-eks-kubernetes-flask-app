@@ -917,41 +917,6 @@ This is the key additional outcome of **Part 4**: the manifests created in Part 
 
 ---
 
-# End-to-End Verification
-
-Use the following commands from the EC2 management instance to verify the complete environment:
-
-```bash
-# Confirm AWS identity
-aws sts get-caller-identity
-
-# Confirm eksctl
-eksctl version
-
-# Confirm the EKS cluster
-aws eks list-clusters --region us-west-2
-eksctl get cluster --region us-west-2
-
-# Confirm Kubernetes nodes and workloads
-kubectl get nodes
-kubectl get deployments
-kubectl get pods
-kubectl get services
-
-# Inspect a specific pod when needed
-kubectl describe pod <POD_NAME>
-```
-
-Expected high-level state:
-
-```text
-EKS Cluster: nextwork-eks-cluster        Active
-Managed Node Group: nextwork-nodegroup   Active
-Worker Nodes                             3 Ready
-Backend Deployment                       Created
-Backend Service                          Created
-Container Image                          Stored in ECR
-```
 
 # Final Project Outcome
 
@@ -972,7 +937,7 @@ By the end of the complete project:
 
 ```text
 Part 1 — Launch a Kubernetes Cluster             ✅
-Part 2 — Containerize & Push Image to ECR        ✅
+Part 2 — Set up Kubernetes Deployment            ✅
 Part 3 — Create Kubernetes Manifests             ✅
 Part 4 — Deploy Backend with Kubernetes          ✅
 ```
@@ -986,7 +951,7 @@ kubectl delete -f flask-service.yaml
 kubectl delete -f flask-deployment.yaml
 ```
 
-If the entire EKS lab is finished:
+After completing the project, delete the EKS cluster and its associated resources:
 
 ```bash
 eksctl delete cluster \
